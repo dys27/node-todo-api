@@ -17,14 +17,14 @@ var Todo = mongoose.model('Todo',{
   }
 });
 
-var newTodo = new Todo({
-  text: "dinner"
-});
-
-newTodo.save().then((doc)=>{
-  console.log(doc);
-},(e)=>{
-  console.log('unable to save todo');
-});
+// var newTodo = new Todo({
+//   text: "dinner"
+// });
+//
+// newTodo.save().then((doc)=>{
+//   console.log(doc);
+// },(e)=>{
+//   console.log('unable to save todo');
+// });
 
 module.exports = {Todo};
