@@ -1,30 +1,20 @@
 var mongoose = require('mongoose');
 
-var Todo = mongoose.model('Todo',{
+var Todo = mongoose.model('Todo', {
   text: {
     type: String,
     required: true,
     minlength: 1,
-    trim:true
+    trim: true
   },
-  completed:{
+  completed: {
     type: Boolean,
-    default:false
+    default: false
   },
-  completedAt:{
+  completedAt: {
     type: Number,
-    default:null
+    default: null
   }
 });
-
-// var newTodo = new Todo({
-//   text: "dinner"
-// });
-//
-// newTodo.save().then((doc)=>{
-//   console.log(doc);
-// },(e)=>{
-//   console.log('unable to save todo');
-// });
 
 module.exports = {Todo};
